@@ -12,10 +12,12 @@ var ErrorModal = React.createClass({
     message: React.PropTypes.string.isRequired
   },
   componentDidMount: function(){
+    //console.log(this.props);
     var modal = new Foundation.Reveal($('#error-modal'));
     modal.open();
   },
   render: function(){
+    console.log(this.props);
     var {title, message} = this.props;
     return (
       <div id="error-modal" className="reveal tiny text-center" data-reveal="">
